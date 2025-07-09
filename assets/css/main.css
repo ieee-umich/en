@@ -4110,10 +4110,19 @@ input, select, textarea {
 	}
 
 .officer-img {
-    width: 200px;           /* Set a consistent width */
-    height: 200px;          /* Set a consistent height */
-    object-fit: cover;      /* Crop and maintain aspect ratio */
-    border-radius: 50%;     /* Optional: makes images circular */
+    width: 400px !important;
+    height: 400px !important;
+    object-fit: cover;
+    border-radius: 50% !important;
     display: block;
     margin: 0 auto 1rem auto;
+    border: 3px solid #ffffff22;
+    background-color: #1e1e2f;
 }
+
+.officer-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
+}
+
