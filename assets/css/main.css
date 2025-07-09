@@ -4112,12 +4112,12 @@ input, select, textarea {
 .officer-img {
     width: 400px !important;
     height: 400px !important;
-    object-fit: cover;
+    object-fit: cover !important;
     border-radius: 50% !important;
-    display: block;
-    margin: 0 auto 1rem auto;
-    border: 3px solid #ffffff22;
-    background-color: #1e1e2f;
+    display: block !important;
+    margin: 0 auto 1rem auto !important;
+    border: 3px solid #ffffff22 !important;
+    background-color: #1e1e2f !important;
 }
 
 .officer-img:hover {
