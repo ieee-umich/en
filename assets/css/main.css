@@ -4110,8 +4110,8 @@ input, select, textarea {
 	}
 
 .officer-img {
-    width: 400px !important;
-    height: 400px !important;
+    width: 300px;
+    height: 300px;
     object-fit: cover !important;
     border-radius: 50% !important;
     display: block !important;
