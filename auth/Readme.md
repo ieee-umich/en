@@ -1,23 +1,31 @@
-Student (浏览器)
+# Read me for authorization with University of Michigan OAuth2
+
+Client key: 72aE7VADNpqG9TZP9PJGiH5GnzzNwAuFKOfA4ZiZOL0rYuyb
+Client Secret: IoY2IzjyK8f375rtbfEkykpUIxkyR21Jz7TZcYDJ5V64SKCUTA5ZXGd5OmaxV9nj
+
+will use this to access Person API.
+
+
+Student
       │
-      │ 1. 点击 "登录" 按钮
+      │ 1. Click "Login with UM" Button
       ▼
-Your Website
+Website
       │
       │ 2. Redirect → UM InCommon / Shibboleth Login Page
       ▼
 UM Login Page
       │
-      │ 3. 学生输入校园账号和密码
+      │ 3. Student Enters Credentials → Submit
       ▼
 Authorization Server (UM OAuth2)
       │
-      │ 4. 登录成功 → Redirect Back to Your Website
-      │    URL 带上 Authorization Code
+      │ 4. Redirect → Your Redirect URI with Authorization Code
+      │    e.g. https://yourdomain.com/oauth2/callback?code=<auth_code>
       ▼
-Your Web Server (后端)
+Web Server (Backend)
       │
-      │ 5. 用 Authorization Code 请求 Access Token
+      │ 5. Use Authorization Code to request Access Token
       │    POST https://gw.api.it.umich.edu/um/oauth2/token
       │    grant_type=authorization_code
       │    client_id, client_secret
@@ -25,13 +33,13 @@ Your Web Server (后端)
       ▼
 OAuth2 Access Token
       │
-      │ 6. 用 Access Token 调用 Person API
+      │ 6. use Access Token to call Person API
       │    GET https://gw.api.it.umich.edu/um/person/v1/person/<student_id>
       │    Header: Authorization: Bearer <access_token>
       ▼
 Person API Response
       │
-      │ 7. 返回 JSON，包括：
+      │ 7. response JSON:
       │    {
       │       "uniqname": "jsmith",
       │       "firstName": "John",
@@ -39,11 +47,8 @@ Person API Response
       │       ...
       │    }
       ▼
-Your Web Server
+Web Server
       │
-      │ 8. 用 uniqname 做匹配或业务逻辑
+      │ 8. use uniqname to enter sql database and get user info, also use it to determine authority level
       ▼
-Student (浏览器)
-      │
-      │ 9. 展示定制化内容
-      ▼
+Student Dashboard

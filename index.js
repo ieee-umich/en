@@ -16,7 +16,7 @@ console.log("try to connect mysql");
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'somepassword',
+    password: 'password',
     database: 'pointSys'
 });
 
