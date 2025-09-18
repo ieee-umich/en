@@ -12,18 +12,20 @@ app.set('views', path.join(__dirname, 'views'));
 const login = require('./auth/auth.js');
 app.use('/auth', login);
 
-console.log("try to connect mysql");
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'pointSys'
-});
 
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to MySQL database!');
-});
+// SQL connection setup - currently commented as no database is used
+// console.log("try to connect mysql");
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'password',
+//     database: 'pointSys'
+// });
+
+// connection.connect((err) => {
+//     if (err) throw err;
+//     console.log('Connected to MySQL database!');
+// });
 
 
 app.get('/pointsys', (req, res) => {
