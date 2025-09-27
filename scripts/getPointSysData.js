@@ -1,4 +1,4 @@
-import { _, BACKEND_URL } from "./../config/config.js";
+import { BACKEND_URL } from "./../config/config.js";
 
 fetch(`${BACKEND_URL}/database/pointSys`)
     .then(res => {
