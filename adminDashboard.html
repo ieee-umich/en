@@ -50,8 +50,8 @@
         <section id="wrapper">
             <header>
                 <div class="inner">
-                    <h2>Elements</h2>
-                    <p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+                    <h2>Points Manager</h2>
+                    <p>Add, deduct, and authorize members</p>
                 </div>
             </header>
 
@@ -62,28 +62,29 @@
                         <h3 class="major">Point change request</h3>
                         <form method="post" action="#">
                             <div class="row gtr-uniform">
+
                                 <div class="col-6 col-12-xsmall">
                                     <label for="demo-name">Unique Name</label>
                                     <input type="text" name="demo-name" id="demo-name" value="" />
                                 </div>
-                                <!-- <div class="col-6 col-12-xsmall">
-                                    <label for="demo-email"> </label>
-                                    <input type="email" name="demo-email" id="demo-email" value="" />
-                                </div> -->
                                 <div class="col-12">
-                                    <label for="demo-category">Point Scale</label>
+                                    <label for="demo-category">Points Adjustment</label>
                                     <select name="demo-category" id="demo-category">
-                                        <option value="">-</option>
-                                        <option value="1">5</option>
-                                        <option value="1">10</option>
-                                        <option value="1">20</option>
-                                        <option value="1">50</option>
+                                        <option value="0">0</option>
+                                        <option value="-50">-50</option>
+                                        <option value="-20">-20</option>
+                                        <option value="-10">-10</option>
+                                        <option value="-5">-5</option>
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
                                     </select>
                                 </div>
-                                <!-- <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                    <label for="demo-human">Not a robot</label>
-                                </div> -->
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="demo-human" name="demo-human"> <!-- default unchecked, it want to check, add 'checked' -->
+                                    <label for="demo-human">Add as an admin at the same time</label>
+                                </div>
                                 <!-- <div class="col-12">
                                     <label for="demo-message">Message</label>
                                     <textarea name="demo-message" id="demo-message" rows="6"></textarea>
@@ -91,7 +92,7 @@
                                 <div class="col-12">
                                     <ul class="actions">
                                         <ul class="actions">
-                                            <li><a href="#" class="button primary">Send</a></li>
+                                            <li><a type="submit" class="button primary">Send</a></li>
                                         </ul>
                                     </ul>
                                 </div>
