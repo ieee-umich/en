@@ -14,6 +14,8 @@ const DEPLOYED_FRONTEND_URL = "https://ieee.eecs.umich.edu";
 const LOCAL_BACKEND_URL = "http://localhost:3000";
 const DEPLOYED_BACKEND_URL = "https://en-pt5n.onrender.com";
 
+export const MAINTAINER = "Gao Shenghan";
+export const MAINTAINER_EMAIL = "shenghan@umich.edu";
 
 export const FRONTEND_URL = USING_LOCAL_FRONTEND ? LOCAL_FRONTEND_URL : (RELEASE_MODE ? DEPLOYED_FRONTEND_URL : TEST_FRONTEND_URL);
 export const BACKEND_URL = RELEASE_MODE ? DEPLOYED_BACKEND_URL : LOCAL_BACKEND_URL;

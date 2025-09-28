@@ -10,12 +10,12 @@
     <title>Admin Dashboard</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
+        <link rel="stylesheet" href="../../assets/css/noscript.css" />
     </noscript>
-    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="shortcut icon" href="../../images/favicon.ico">
 </head>
 
 <body class="is-preload">
@@ -60,16 +60,15 @@
                 <div class="inner">
                     <section>
                         <h3 class="major">Point change request</h3>
-                        <form method="post" action="#">
+                        <form id="pointsform" method="post">
                             <div class="row gtr-uniform">
-
                                 <div class="col-6 col-12-xsmall">
-                                    <label for="demo-name">Unique Name</label>
-                                    <input type="text" name="demo-name" id="demo-name" value="" />
+                                    <label for="unique_name">Unique Name</label>
+                                    <input type="text" name="unique_name" id="unique_name" value="" />
                                 </div>
                                 <div class="col-12">
-                                    <label for="demo-category">Points Adjustment</label>
-                                    <select name="demo-category" id="demo-category">
+                                    <label for="scale">Points Adjustment</label>
+                                    <select name="scale" id="scale">
                                         <option value="0">0</option>
                                         <option value="-50">-50</option>
                                         <option value="-20">-20</option>
@@ -82,9 +81,16 @@
                                     </select>
                                 </div>
                                 <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="demo-human" name="demo-human"> <!-- default unchecked, it want to check, add 'checked' -->
-                                    <label for="demo-human">Add as an admin at the same time</label>
+                                    <input type="checkbox" id="isnewadmin" name="isnewadmin">
+                                    <!-- default unchecked, it want to check, add 'checked' -->
+                                    <label for="isnewadmin">Add as an admin</label>
+
                                 </div>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="isnewmember" name="isnewmember">
+                                    <label for="isnewmember">Add as a new member</label>
+                                </div>
+
                                 <!-- <div class="col-12">
                                     <label for="demo-message">Message</label>
                                     <textarea name="demo-message" id="demo-message" rows="6"></textarea>
@@ -92,11 +98,12 @@
                                 <div class="col-12">
                                     <ul class="actions">
                                         <ul class="actions">
-                                            <li><a type="submit" class="button primary">Send</a></li>
+                                            <li><button type="submit" class="button primary">Send</button></li>
                                         </ul>
                                     </ul>
                                 </div>
                             </div>
+                            
                         </form>
                     </section>
 
@@ -121,12 +128,13 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script type="module" src="../../scripts/redirection.js"></script>
 
 </body>
 
