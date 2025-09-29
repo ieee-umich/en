@@ -62,11 +62,20 @@
                         <h3 class="major">Point change request</h3>
                         <form id="pointsform" method="post">
                             <div class="row gtr-uniform">
-                                <div class="col-6 col-12-xsmall">
+                                <div class="col-10">
                                     <label for="unique_name">Unique Name</label>
                                     <input type="text" name="unique_name" id="unique_name" value="" />
                                 </div>
-                                <div class="col-12">
+                                <div class="col-10">
+                                    <label for="unique_name">Name (if want to add as new member)</label>
+                                    <input type="text" name="name" id="name" value="" />
+                                </div>
+                                <div class="col-10">
+                                    <label for="unique_name">Password (if want to add as new admin)</label>
+                                    <input type="password" name="password" id="password" value="" />
+                                    <button type="button" onclick="togglePassword()">Show password</button>
+                                </div>
+                                <div class="col-3">
                                     <label for="scale">Points Adjustment</label>
                                     <select name="scale" id="scale">
                                         <option value="0">0</option>
@@ -80,6 +89,7 @@
                                         <option value="50">50</option>
                                     </select>
                                 </div>
+                                
                                 <div class="col-6 col-12-small">
                                     <input type="checkbox" id="isnewadmin" name="isnewadmin">
                                     <!-- default unchecked, it want to check, add 'checked' -->
@@ -134,7 +144,8 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script type="module" src="../../scripts/redirection.js"></script>
+    <script type="module" src="/scripts/redirection.js"></script>
+    <script src="/scripts/togglepassword.js"></script>
 
 </body>
 

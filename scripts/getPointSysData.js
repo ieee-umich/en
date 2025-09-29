@@ -1,3 +1,6 @@
+// This script is used in pointSys.html to fetch user point data from the backend
+// and populate the HTML table with the retrieved data.
+
 import { BACKEND_URL } from "./../config/config.js";
 
 fetch(`${BACKEND_URL}/database/pointSys`)
