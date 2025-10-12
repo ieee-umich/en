@@ -14,26 +14,28 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-            const res = await fetch(`${BACKEND_URL}/database/credentials`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
-            });
+        const res = await fetch(`${BACKEND_URL}/database/credentials`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
 
         console.log(res);
         const resData = await res.json();
 
-        if (res.status == 404) {
-            throw new Error('Web error! Response status ' + res.status);
-        } else if (!resData.success) { // for database operation errors, error inside backend, but still returns 200 OK
+        if (!resData.success && res.status != 404) { // for database operation errors, error inside backend, but still returns 200 OK
             throw new Error('Database error: ' + (resData.message || 'Unknown database error, please contact maintainer email: ' + MAINTAINER_EMAIL));
+        } else if (res.status == 404) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok
+            throw new Error('Web error! Response status ' + res.status + '. ' + (resData.message || 'Please contact maintainer email: ' + MAINTAINER_EMAIL));
         }
 
-        //window.location.href = `${FRONTEND_URL}/ui/login/adminDashboard.html`;
+        // If successful, tokem
+
+        window.location.href = `${FRONTEND_URL}/ui/login/adminDashboard.html`;
     } catch (err) {
         //window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html`;
         const errMsg = encodeURIComponent(err.message); // pass error message as URL parameter to show on failure page
-        //window.location.href = `${FRONTEND_URL}/ui/login/adminLogin.html?error=${errMsg}`;
+        window.location.href = `${FRONTEND_URL}/ui/login/adminLogin.html?error=${errMsg}`;
         console.error(err);
     }
 });

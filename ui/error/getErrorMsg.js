@@ -6,6 +6,3 @@ const msg = params.get("error");
 if (msg) {
     document.getElementById("errorMsg").textContent = decodeURIComponent(msg);
 }
-else {
-    document.getElementById("errorMsg").textContent = 'Unknown error occurred. Please contact maintainer' + MAINTAINER_EMAIL + ' for help.';
-}
