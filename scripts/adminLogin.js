@@ -1,7 +1,7 @@
 // This script is used in adminLogin.html(or unique name login) to handle the form submission to check user credentials
 // and redirect to dashboard is successful, or failure page if not.
 
-import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "/config/config.js";
+import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "./../config/config.js";
 
 const form = document.querySelector("form");
 form.addEventListener("submit", async (e) => {
