@@ -1,9 +1,7 @@
 
+export const RELEASE_MODE = false; // true for deployed version, false for local testing or development
 
-const RELEASE_MODE = false; // true for deployed version, false for local testing or development
-
-const USING_LOCAL_FRONTEND = false && !RELEASE_MODE; // true for local frontend, false for deployed frontend
-
+export const USING_LOCAL_FRONTEND = false && !RELEASE_MODE; // true for local frontend, false for deployed frontend
 
 // Frontend URLs
 const LOCAL_FRONTEND_URL = "http://127.0.0.1:5501";
