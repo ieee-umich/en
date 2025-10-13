@@ -29,7 +29,7 @@ form.addEventListener("submit", async (e) => {
             throw new Error('Web error! Response status ' + res.status + '. ' + (resData.message || 'Please contact maintainer email: ' + MAINTAINER_EMAIL));
         }
 
-        // If successful, tokem
+        // If successful, redirect to admin dashboard, cookie will be set by backend
 
         window.location.href = `${FRONTEND_URL}/ui/login/adminDashboard.html`;
     } catch (err) {

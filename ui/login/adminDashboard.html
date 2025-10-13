@@ -25,9 +25,9 @@
 
         <!-- Header -->
         <header id="header">
-            <h1><a href="index.html">Welcome Admin</a></h1>
+            <h1><a href="/index.html">Welcome Admin</a></h1>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="/index.html">Home</a>
             </nav>
         </header>
 
@@ -36,11 +36,15 @@
             <div class="inner">
                 <h2>Menu</h2>
                 <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="generic.html">Generic</a></li>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li><a href="#">Log In</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="officers.html">Officers</a></li>
+                    <li><a href="sponsorship.html">Sponsorship</a></li>
+                    <li><a href="resumebook.html">Resume Book</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="pointSys.html">Point Rank</a></li>
+                    <li><a href="login.html">Member Login</a></li>
                 </ul>
                 <a href="#" class="close">Close</a>
             </div>
@@ -67,13 +71,23 @@
                                     <input type="text" name="unique_name" id="unique_name" value="" />
                                 </div>
                                 <div class="col-10">
-                                    <label for="unique_name">Name (if want to add as new member)</label>
+                                    <label for="unique_name">Name (if want to add as new member or admin)</label>
                                     <input type="text" name="name" id="name" value="" />
                                 </div>
                                 <div class="col-10">
                                     <label for="unique_name">Password (if want to add as new admin)</label>
                                     <input type="password" name="password" id="password" value="" />
                                     <button type="button" onclick="togglePassword()">Show password</button>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="isnewadmin" name="isnewadmin">
+                                    <!-- default unchecked, it want to check, add 'checked' -->
+                                    <label for="isnewadmin">Add as an admin</label>
+
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="isnewmember" name="isnewmember">
+                                    <label for="isnewmember">Add as a new member</label>
                                 </div>
                                 <div class="col-3">
                                     <label for="scale">Points Adjustment</label>
@@ -89,17 +103,8 @@
                                         <option value="50">50</option>
                                     </select>
                                 </div>
-                                
-                                <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="isnewadmin" name="isnewadmin">
-                                    <!-- default unchecked, it want to check, add 'checked' -->
-                                    <label for="isnewadmin">Add as an admin</label>
 
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <input type="checkbox" id="isnewmember" name="isnewmember">
-                                    <label for="isnewmember">Add as a new member</label>
-                                </div>
+
 
                                 <!-- <div class="col-12">
                                     <label for="demo-message">Message</label>
@@ -113,7 +118,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            
+
                         </form>
                     </section>
 

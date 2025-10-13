@@ -1,8 +1,8 @@
 
+
 const RELEASE_MODE = false; // true for deployed version, false for local testing or development
 
-
-const USING_LOCAL_FRONTEND = true && !RELEASE_MODE; // true for local frontend, false for deployed frontend
+const USING_LOCAL_FRONTEND = false && !RELEASE_MODE; // true for local frontend, false for deployed frontend
 
 
 // Frontend URLs

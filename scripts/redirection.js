@@ -25,10 +25,11 @@ form.addEventListener("submit", async (e) => {
 
         const resData = await res.json();
         
-        if (!res.ok) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok
-            throw new Error('Web error! Response status ' + res.status);
-        } else if (!resData.success) { // for database operation errors, error inside backend, but still returns 200 OK
+
+        if (!resData.success && res.status != 404) { // for database operation errors, error inside backend, but still returns 200 OK
             throw new Error('Database error: ' + (resData.message || 'Unknown database error, please contact maintainer email: ' + MAINTAINER_EMAIL));
+        } else if (res.status == 404) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok
+            throw new Error('Web error! Response status ' + res.status + '. ' + (resData.message || 'Please contact maintainer email: ' + MAINTAINER_EMAIL));
         }
 
         window.location.href = `${FRONTEND_URL}/ui/login/submitSuccess.html`;
