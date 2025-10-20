@@ -1,10 +1,8 @@
-# IEEE web page
+Welcome to IEEE_WEB_PAGE
 
-- Backend repo: https://en-pt5n.onrender.com
+- Frontend URL: https://ieee.eecs.umich.edu
+- Backend URL: https://en-pt5n.onrender.com
 
-- Frontend repo: https://ieee.eecs.umich.edu
+For more infomation about backend, please chech [this documents](https://gsh-webpage.vercel.app/projects/pointSys)
 
-- Database repo: 
-
-Config for backend URL is in `Config/config.js`.
 
