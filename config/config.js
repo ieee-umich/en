@@ -10,7 +10,7 @@ const DEPLOYED_FRONTEND_URL = "https://ieee.eecs.umich.edu";
 
 // Backend URLs
 const LOCAL_BACKEND_URL = "http://localhost:3000";
-const DEPLOYED_BACKEND_URL = "https://en-pt5n.onrender.com";
+const DEPLOYED_BACKEND_URL = "https://balanced-rat-um-ieee-student-branch-7c499c86.koyeb.app/";
 
 export const MAINTAINER = "Gao Shenghan";
 export const MAINTAINER_EMAIL = "shenghan@umich.edu";
