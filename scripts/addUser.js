@@ -1,7 +1,7 @@
 // This script is used in adminDashboard.html to handle the form submission for updating user points
 // and redirect to success or failure page based on the response from the backend.
 
-import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "./../config/config.js";
+import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "../config/config.js";
 
 const form = document.querySelector("form");
 form.addEventListener("submit", async (e) => {
@@ -9,7 +9,6 @@ form.addEventListener("submit", async (e) => {
 
     const data = {
         unique_name: form.unique_name.value,
-        scale: form.scale.value,
         isnewadmin: form.isnewadmin.checked,
         isnewmember: form.isnewmember.checked,
         password: form.password.value,

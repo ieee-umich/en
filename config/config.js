@@ -1,10 +1,10 @@
 
 export const RELEASE_MODE = false; // true for deployed version, false for local testing or development
 
-export const USING_LOCAL_FRONTEND = false && !RELEASE_MODE; // true for local frontend, false for deployed frontend
+export const USING_LOCAL_FRONTEND = true && !RELEASE_MODE; // true for local frontend, false for deployed frontend
 
 // Frontend URLs
-const LOCAL_FRONTEND_URL = "http://127.0.0.1:5501";
+const LOCAL_FRONTEND_URL = "http://127.0.0.1:5500";
 const TEST_FRONTEND_URL = "https://gaoshenghan1130.github.io/ieee_web_page"; // Developers should set this to their own forked repo for testing
 const DEPLOYED_FRONTEND_URL = "https://ieee.eecs.umich.edu";
 

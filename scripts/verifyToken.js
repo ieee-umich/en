@@ -2,12 +2,12 @@
 // If not logged in, redirects to the failure page.
 // Used in adminDashboard.html to ensure only logged-in users can access the page.
 
-import { RELEASE_MODE, FRONTEND_URL, BACKEND_URL } from "./../config/config.js";
+import { RELEASE_MODE, FRONTEND_URL, BACKEND_URL, USING_LOCAL_FRONTEND } from "./../config/config.js";
 
 
 
 async function checkLogin() {
-    if (!RELEASE_MODE) return; // skip check in development mode
+    if (!RELEASE_MODE ) return; // skip check in development mode
     try {
         const res = await fetch(`${BACKEND_URL}/database/verifyToken`, {
             method: 'GET',
