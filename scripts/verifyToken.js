@@ -13,10 +13,9 @@ async function checkLogin() {
             method: 'GET',
             credentials: 'include', // must carry cookies for session
         });
-        if (!res.ok) throw new Error('Not logged in');
         const data = await res.json();
-        if (!data.loggedIn) throw new Error('Not logged in');
-        if (data.decoded.role != 'admin') throw new Error('Not an admin user');
+        if (!data.loggedIn) window.location.href = `${FRONTEND_URL}/login.html`;
+        if (data.decoded.role != 'admin') window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=Not an admin user`;
     } catch (err) {
         console.log(err);
         window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${err}`;
