@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "../config/config.js";
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
