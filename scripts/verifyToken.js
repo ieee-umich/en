@@ -15,7 +15,7 @@ async function checkLogin() {
         });
         const data = await res.json();
         if (!data.loggedIn) window.location.href = `${FRONTEND_URL}/login.html`;
-        if (data.decoded.role != 'admin') window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=Not an admin user`;
+        if (data.role != 'admin') window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=Not an admin user`;
     } catch (err) {
         console.log(err);
         window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${err}`;
