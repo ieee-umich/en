@@ -19,7 +19,6 @@ form.addEventListener("submit", async (e) => {
 
         const resData = await res.json();
         
-
         if (!resData.success && res.status != 404) { // for database operation errors, error inside backend, but still returns 200 OK
             throw new Error('Database error: ' + (resData.message || 'Unknown database error, please contact maintainer email: ' + MAINTAINER_EMAIL));
         } else if (res.status == 404) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok

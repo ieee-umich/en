@@ -12,7 +12,8 @@ form.addEventListener("submit", async (e) => {
         isnewadmin: form.isnewadmin.checked,
         isnewmember: form.isnewmember.checked,
         password: form.password.value,
-        name: form.name.value
+        name: form.name.value,
+        scale: 0,
     };
 
     try {

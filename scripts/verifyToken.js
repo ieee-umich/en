@@ -7,7 +7,7 @@ import { RELEASE_MODE, FRONTEND_URL, BACKEND_URL, USING_LOCAL_FRONTEND } from ".
 
 
 async function checkLogin() {
-    if (!RELEASE_MODE ) return; // skip check in development mode
+    if (USING_LOCAL_FRONTEND ) return; // skip check in development mode
     try {
         const res = await fetch(`${BACKEND_URL}/database/verifyToken`, {
             method: 'GET',
