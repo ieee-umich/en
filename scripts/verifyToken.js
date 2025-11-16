@@ -4,8 +4,6 @@
 
 import { RELEASE_MODE, FRONTEND_URL, BACKEND_URL, USING_LOCAL_FRONTEND } from "./../config/config.js";
 
-
-
 async function checkLogin() {
     if (USING_LOCAL_FRONTEND ) return; // skip check in development mode
     try {
