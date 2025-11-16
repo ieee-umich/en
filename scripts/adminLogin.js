@@ -17,6 +17,7 @@ form.addEventListener("submit", async (e) => {
         const res = await fetch(`${BACKEND_URL}/database/credentials`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            credentials: 'include', // must carry cookies for session
             body: JSON.stringify(data)
         });
 
