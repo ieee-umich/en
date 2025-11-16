@@ -56,7 +56,7 @@
             <header>
                 <div class="inner">
                     <h2>Progress Point</h2>
-                    <p>Ranking of points below</p>
+                    <p>Check your points here</p>
                 </div>
             </header>
 
@@ -64,7 +64,30 @@
             <div class="wrapper">
                 <div class="inner">
                     <section>
-                        <h3 class="major">Rank</h3>
+                        <h3 class="major">Your Point</h3>
+                        <p>Input your unique name to check your points</p>
+                        <form id="pointForm" method="post" action="#">
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-xsmall">
+                                    <input type="text" name="unique_name" id="unique_name" value=""
+                                        placeholder="Unique Name" />
+                                </div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Check Point" class="primary" /></li>
+                                        <li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="pointResult"></div>
+                        <div class="inner">
+                            <div id="user-point"></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="inner">Ranking</h3>
                         <div class="table-wrapper">
                             <table id="user-table">
                                 <thead>
@@ -82,7 +105,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <!-- <script src="./config/config.js"> </script> -->
                         </div>
                     </section>
 
