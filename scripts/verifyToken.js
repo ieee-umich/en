@@ -21,7 +21,7 @@ async function checkLogin() {
             window.location.href = `${FRONTEND_URL}/login.html`;
             return;
         }
-        window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${err}`;
+        //window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${err}`;
     }
 }
 
