@@ -14,7 +14,9 @@ async function checkLogin() {
         const data = await res.json();
         console.log(data);
         if (!data.loggedIn) window.location.href = `${FRONTEND_URL}/login.html`;
-        if (data.loggedIn && data.role != 'admin') window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=Not an admin user`;
+        if (data.loggedIn && !data.decoded.isAdmin) window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=Not an admin user`;
+        // If logged in and is admin, do nothing and allow access
+        
     } catch (err) {
         console.log(err);
         if (err.message === 'Not logged in') { // request login 
