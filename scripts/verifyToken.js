@@ -19,6 +19,10 @@ async function checkLogin() {
         if (data.decoded.role != 'admin') throw new Error('Not an admin user');
     } catch (err) {
         console.log(err);
+        if (err.message === 'Not logged in') { // request login 
+            window.location.href = `${FRONTEND_URL}/login.html`;
+            return;
+        }
         window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${err}`;
     }
 }

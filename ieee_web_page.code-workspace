@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ieee_backend"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
