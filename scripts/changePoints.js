@@ -1,7 +1,5 @@
-// This script is used in adminDashboard.html to handle the form submission for updating user points
-// and redirect to success or failure page based on the response from the backend.
-
-import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "./../config/config.js";
+// This script is used 
+import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "../config/config.js";
 
 const form = document.querySelector("form");
 form.addEventListener("submit", async (e) => {
@@ -10,10 +8,6 @@ form.addEventListener("submit", async (e) => {
     const data = {
         unique_name: form.unique_name.value,
         scale: form.scale.value,
-        isnewadmin: form.isnewadmin.checked,
-        isnewmember: form.isnewmember.checked,
-        password: form.password.value,
-        name: form.name.value
     };
 
     try {
@@ -25,7 +19,6 @@ form.addEventListener("submit", async (e) => {
 
         const resData = await res.json();
         
-
         if (!resData.success && res.status != 404) { // for database operation errors, error inside backend, but still returns 200 OK
             throw new Error('Database error: ' + (resData.message || 'Unknown database error, please contact maintainer email: ' + MAINTAINER_EMAIL));
         } else if (res.status == 404) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok

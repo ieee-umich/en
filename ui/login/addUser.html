@@ -54,8 +54,8 @@
         <section id="wrapper">
             <header>
                 <div class="inner">
-                    <h2>Admin Dashboard</h2>
-                    <p>Add points, create and authorize members</p>
+                    <h2>Points Manager</h2>
+                    <p>Add, deduct, and authorize members</p>
                 </div>
             </header>
 
@@ -63,26 +63,49 @@
             <div class="wrapper">
                 <div class="inner">
                     <section>
-                        <h4>Admin Actions</h4>
-                        <div class="col">
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="addUser.html" class="button primary fit">Add User</a></li>
-                                </ul>
+                        <h3 class="major">Point change request</h3>
+                        <form id="pointsform" method="post">
+                            <div class="row gtr-uniform">
+                                <div class="col-10">
+                                    <label for="unique_name">Unique Name</label>
+                                    <input type="text" name="unique_name" id="unique_name" value="" />
+                                </div>
+                                <div class="col-10">
+                                    <label for="unique_name">Name (if want to add as new member or admin)</label>
+                                    <input type="text" name="name" id="name" value="" />
+                                </div>
+                                <div class="col-10">
+                                    <label for="unique_name">Password (if want to add as new admin)</label>
+                                    <input type="password" name="password" id="password" value="" />
+                                    <button type="button" onclick="togglePassword()">Show password</button>
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="isnewadmin" name="isnewadmin">
+                                    <!-- default unchecked, it want to check, add 'checked' -->
+                                    <label for="isnewadmin">Add as an admin</label>
+
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <input type="checkbox" id="isnewmember" name="isnewmember">
+                                    <label for="isnewmember">Add as a new member</label>
+                                </div>
+
+
+
+                                <!-- <div class="col-12">
+                                    <label for="demo-message">Message</label>
+                                    <textarea name="demo-message" id="demo-message" rows="6"></textarea>
+                                </div> -->
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <ul class="actions">
+                                            <li><button type="submit" class="button primary">Send</button></li>
+                                        </ul>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="changePoint.html" class="button primary fit">Change Points With Console</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="changePointsForm.html" class="button primary fit">Change Points With Form</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+
+                        </form>
                     </section>
 
                 </div>
@@ -112,6 +135,7 @@
     <script src="./../../assets/js/breakpoints.min.js"></script>
     <script src="./../../assets/js/util.js"></script>
     <script src="./../../assets/js/main.js"></script>
+    <script type="module" src="./../../scripts/addUser.js"></script>
     <script src="./../../scripts/togglepassword.js"></script>
     <script type="module" src="./../../scripts/verifyToken.js"></script>
 

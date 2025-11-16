@@ -54,37 +54,22 @@
         <section id="wrapper">
             <header>
                 <div class="inner">
-                    <h2>Admin Dashboard</h2>
-                    <p>Add points, create and authorize members</p>
+                    <h2>Points Manager</h2>
+                    <p>Add, deduct, and authorize members</p>
                 </div>
             </header>
 
             <!-- Content -->
             <div class="wrapper">
                 <div class="inner">
-                    <section>
-                        <h4>Admin Actions</h4>
-                        <div class="col">
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="addUser.html" class="button primary fit">Add User</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="changePoint.html" class="button primary fit">Change Points With Console</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-12-medium">
-                                <ul class="actions stacked">
-                                    <li><a href="changePointsForm.html" class="button primary fit">Change Points With Form</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
+                    <button id="generateBtn" class="button primary">Download CSV Template</button>
+                    <form id="uploadForm">
+                        <label for="csvFile" class="custom-file-upload">
+                            📁 Choose CSV File
+                        </label>
+                        <input type="file" id="csvFile" accept=".csv" />
+                        <button type="submit">Upload</button>
+                    </form>
                 </div>
             </div>
 
@@ -112,6 +97,7 @@
     <script src="./../../assets/js/breakpoints.min.js"></script>
     <script src="./../../assets/js/util.js"></script>
     <script src="./../../assets/js/main.js"></script>
+    <script type="module" src="./../../scripts/redirection.js"></script>
     <script src="./../../scripts/togglepassword.js"></script>
     <script type="module" src="./../../scripts/verifyToken.js"></script>
 
