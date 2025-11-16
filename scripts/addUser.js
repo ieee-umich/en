@@ -1,0 +1,42 @@
+// This script is used in adminDashboard.html to handle the form submission for updating user points
+// and redirect to success or failure page based on the response from the backend.
+
+import { BACKEND_URL, FRONTEND_URL, MAINTAINER_EMAIL } from "../config/config.js";
+
+const form = document.querySelector("form");
+form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // prevent default form submission behavior
+
+    const data = {
+        unique_name: form.unique_name.value,
+        isnewadmin: form.isnewadmin.checked,
+        isnewmember: form.isnewmember.checked,
+        password: form.password.value,
+        name: form.name.value,
+        scale: 0,
+    };
+
+    try {
+        const res = await fetch(`${BACKEND_URL}/database/updatePoints`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const resData = await res.json();
+        
+
+        if (!resData.success && res.status != 404) { // for database operation errors, error inside backend, but still returns 200 OK
+            throw new Error('Database error: ' + (resData.message || 'Unknown database error, please contact maintainer email: ' + MAINTAINER_EMAIL));
+        } else if (res.status == 404) { // for error handling, 404 or other error status codes do not trigger catch block, need to check res.ok
+            throw new Error('Web error! Response status ' + res.status + '. ' + (resData.message || 'Please contact maintainer email: ' + MAINTAINER_EMAIL));
+        }
+
+        window.location.href = `${FRONTEND_URL}/ui/login/submitSuccess.html`;
+    } catch (err) {
+        //window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html`;
+        const errMsg = encodeURIComponent(err.message); // pass error message as URL parameter to show on failure page
+        window.location.href = `${FRONTEND_URL}/ui/login/submitFailed.html?error=${errMsg}`;
+        console.error(err);
+    }
+});

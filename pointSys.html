@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Progress Point</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">Solid State</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="officers.html">Officers</a></li>
+                    <li><a href="sponsorship.html">Sponsorship</a></li>
+                    <li><a href="resumebook.html">Resume Book</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="pointSys.html">Point Rank</a></li>
+                    <li><a href="ui/login/adminDashboard.html">Admin Dashboard</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+            <header>
+                <div class="inner">
+                    <h2>Progress Point</h2>
+                    <p>Check your points here</p>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="wrapper">
+                <div class="inner">
+                    <section>
+                        <h3 class="major">Your Point</h3>
+                        <p>Input your unique name to check your points</p>
+                        <form id="pointForm" method="post" action="#">
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-xsmall">
+                                    <input type="text" name="unique_name" id="unique_name" value=""
+                                        placeholder="Unique Name" />
+                                </div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Check Point" class="primary" /></li>
+                                        <li><input type="reset" value="Reset" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="pointResult"></div>
+                        <div class="inner">
+                            <div id="user-point"></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="inner">Ranking</h3>
+                        <div class="table-wrapper">
+                            <table id="user-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Unique Name</th>
+                                        <th>Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                        <td>Loading...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <section id="footer">
+
+                        <div class="inner">
+                            <ul class="copyright">
+                                <li>Copyright &copy; 2021 IEEE - University of Michigan. All rights reserved.</li>
+                                <li>View <a href="https://www.ieee.org/security-privacy.html">IEEE Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+            <script type="module" src="./scripts/getPointSysData.js">
+            </script>
+
+</body>
+
+</html>

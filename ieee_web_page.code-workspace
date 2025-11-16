@@ -1,5 +1,14 @@
 {
-    "settings": {
-        "stm32cube-ide-clangd.path": "cube"
-    }
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ieee_backend"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "ieee_web_page"
+	}
 }
