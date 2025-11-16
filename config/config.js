@@ -1,5 +1,5 @@
 
-export const RELEASE_MODE = false; // true for deployed version, false for local testing or development
+export const RELEASE_MODE = true; // true for deployed version, false for local testing or development
 
 export const USING_LOCAL_FRONTEND = true && !RELEASE_MODE; // true for local frontend, false for deployed frontend
 
